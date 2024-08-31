@@ -13,7 +13,7 @@
  * @returns {Promise<Object>} Hasil respon dari API dalam bentuk JSON.
  */
 export const postApiRes = async ( resource, value ) => {
-    const response = await fetch(`http://localhost:3000/api/${resource}`, {
+    const response = await fetch(`/api/${resource}`, {
         method: 'POST',
         body: JSON.stringify(value),
         headers: {
@@ -33,7 +33,7 @@ export const postApiRes = async ( resource, value ) => {
  * @returns {Promise<Object>} Hasil respon dari API dalam bentuk JSON.
  */
 export const patchApiRes = async ( resource, value ) => {
-    const response = await fetch(`http://localhost:3000/api/${resource}`, {
+    const response = await fetch(`/api/${resource}`, {
         method: 'PATCH',
         body: JSON.stringify(value),
         headers: {
@@ -53,7 +53,7 @@ export const patchApiRes = async ( resource, value ) => {
  * @returns {Promise<Object>} Hasil respon dari API dalam bentuk JSON.
  */
 export const deleteApiRes = async ( resource, value ) => {
-    const response = await fetch(`http://localhost:3000/api/${resource}`, {
+    const response = await fetch(`/api/${resource}`, {
         method: 'DELETE',
         body: JSON.stringify(value),
         headers: {
@@ -72,7 +72,7 @@ export const deleteApiRes = async ( resource, value ) => {
  * @returns {Promise<Object>} Hasil respon dari API dalam bentuk JSON.
  */
 export const getApiRes = async ( resource ) => {
-    const response = await fetch(`http://localhost:3000/api/${resource}`, {
+    const response = await fetch(`/api/${resource}`, {
         method: "GET"
     })
 
