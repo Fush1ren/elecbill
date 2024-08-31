@@ -58,7 +58,7 @@ const LoginAdmin = () => {
                 handleLoginSuccess(cache[cacheKey]);
                 return;
             }
-            const api = await postApiRes("/login", value); // mengirim data ke API
+            const api = await postApiRes("login", value); // mengirim data ke API
             if (api.result.error.length > 0) return window.alert('Username & Password Salah'); // menampilkan notifikasi gagal
             cache[cacheKey] = api; // Menyimpan hasil login ke cache
             handleLoginSuccess(api); // Menangani login yang berhasil
